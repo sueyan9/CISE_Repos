@@ -28,6 +28,7 @@ jobs:
 
       - name: Run the tests
         run: npm test
+        working-directory: ./CISE_Repo/worksheet2
 
       - name: Build
         run: npm run build
