@@ -35,4 +35,9 @@ jobs:
         run: npm run build
         working-directory: worksheet2/my-react-app
 
-        
+      - name: Install Newman
+        run: npm install -g newman
+
+      - name: Run Postman API tests
+        run: |
+          newman run worksheet2/my-react-app/postman/postman_collection.json 
