@@ -40,4 +40,4 @@ jobs:
 
       - name: Run Postman API tests
         run: |
-          newman run worksheet2/my-react-app/postman/postman_collection.json 
+          newman run worksheet2/my-nest-app/postman/postman_collection.json 
