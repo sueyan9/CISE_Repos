@@ -14,7 +14,7 @@
 					"script": {
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200); // 检查状态码是 200",
+							"    pm.response.to.have.status(200); ,
 							"});",
 							"",
 							"pm.test(\"Response is an object\", function () {",
@@ -64,7 +64,7 @@
 					"script": {
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200); // 检查状态码是 200",
+							"    pm.response.to.have.status(200); ,
 							"});",
 							"",
 							"pm.test(\"Response is an array\", function () {",
@@ -109,7 +109,7 @@
 					"script": {
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200); // 检查状态码是 200",
+							"    pm.response.to.have.status(200); ,
 							"});",
 							"",
 							"pm.test(\"Response is an array\", function () {",
