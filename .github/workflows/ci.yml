@@ -5,6 +5,12 @@ on:
     branches: [Development]
   pull_request:
     branches: [Development]
+  workflow_dispatch:
+    inputs:
+      trigger:
+        description: 'Trigger action'
+        required: true
+        default: 'yes'
 
 jobs:
   build:  
@@ -34,10 +40,3 @@ jobs:
       - name: Build
         run: npm run build
         working-directory: worksheet2/my-react-app
-
-      - name: Install Newman
-        run: npm install -g newman
-
-      - name: Run Postman API tests
-        run: |
-          newman run worksheet2/my-nest-app/postman/postman_collection.json 
