@@ -1,75 +1,69 @@
-import { useRouter } from "next/router"; 
+import {useRouter} from "next/router";
 
-import React from "react"; 
+import React from "react";
 
-import styles from "./Nav.module.scss"; 
+import styles from "./Nav.module.scss";
 
- 
 
-type Props = { 
+type Props = {
 
-  route?: string; 
+    route?: string;
 
-  children: React.ReactNode; 
+    children: React.ReactNode;
 
-  end?: boolean; 
+    end?: boolean;
 
-  dropdown?: boolean; 
+    dropdown?: boolean;
 
-  onClick?: boolean | (() => void); 
+    onClick?: boolean | (() => void);
 
-  style?: React.CSSProperties; 
+    style?: React.CSSProperties;
 
-}; 
+};
 
- 
 
-const NavItem = ({ children, route, end, dropdown, onClick, style }: Props) => { 
+const NavItem = ({children, route, end, dropdown, onClick, style}: Props) => {
 
-  const router = useRouter(); 
+    const router = useRouter();
 
- 
 
-  const navigate: React.MouseEventHandler<HTMLDivElement> = (event) => { 
+    const navigate: React.MouseEventHandler<HTMLDivElement> = (event) => {
 
-    if (typeof route === "string") { 
+        if (typeof route === "string") {
 
-      router.push(route); 
+            router.push(route);
 
-    } 
+        }
 
- 
 
-    event.stopPropagation(); 
+        event.stopPropagation();
 
-  }; 
+    };
 
- 
 
-  return ( 
+    return (
 
-    <div 
+        <div
 
-      style={style} 
+            style={style}
 
-      className={`${route || onClick ? styles.clickable : styles.navitem}${ 
+            className={`${route || onClick ? styles.clickable : styles.navitem}${
 
-        end ? ` ${styles.end}` : "" 
+                end ? ` ${styles.end}` : ""
 
-      }${dropdown ? ` ${styles.dropdown}` : ""}`} 
+            }${dropdown ? ` ${styles.dropdown}` : ""}`}
 
-      onClick={typeof onClick === "function" ? onClick : navigate} 
+            onClick={typeof onClick === "function" ? onClick : navigate}
 
-    > 
+        >
 
-      {children} 
+            {children}
 
-    </div> 
+        </div>
 
-  ); 
+    );
 
-}; 
+};
 
- 
 
 export default NavItem; 
