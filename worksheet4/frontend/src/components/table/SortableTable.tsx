@@ -1,54 +1,52 @@
-import React from "react"; 
+import React from "react";
 
- 
 
-interface SortableTableProps { 
+interface SortableTableProps {
 
-  headers: { key: string; label: string }[]; 
+    headers: { key: string; label: string }[];
 
-  data: any[]; 
+    data: any[];
 
-} 
+}
 
- 
 
-const SortableTable: React.FC<SortableTableProps> = ({ headers, data }) => ( 
+const SortableTable: React.FC<SortableTableProps> = ({headers, data}) => (
 
-  <table> 
+    <table>
 
-    <thead> 
+        <thead>
 
-      <tr> 
+        <tr>
 
-        {headers.map((header) => ( 
+            {headers.map((header) => (
 
-          <th key={header.key}>{header.label}</th> 
+                <th key={header.key}>{header.label}</th>
 
-        ))} 
+            ))}
 
-      </tr> 
+        </tr>
 
-    </thead> 
+        </thead>
 
-    <tbody> 
+        <tbody>
 
-      {data.map((row, i) => ( 
+        {data.map((row, i) => (
 
-        <tr key={i}> 
+            <tr key={i}>
 
-          {headers.map((header) => ( 
+                {headers.map((header) => (
 
-            <td key={header.key}>{row[header.key]}</td> 
+                    <td key={header.key}>{row[header.key]}</td>
 
-          ))} 
+                ))}
 
-        </tr> 
+            </tr>
 
-      ))} 
+        ))}
 
-    </tbody> 
+        </tbody>
 
-  </table> 
+    </table>
 
-); 
+);
 export default SortableTable; 

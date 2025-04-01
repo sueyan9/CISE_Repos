@@ -1,65 +1,61 @@
-import React from "react"; 
+import React from "react";
 
-import { useForm } from "react-hook-form"; 
+import {useForm} from "react-hook-form";
 
- 
 
-export default function SubmissionForm() { 
+export default function SubmissionForm() {
 
-  const { register, handleSubmit } = useForm(); 
+    const {register, handleSubmit} = useForm();
 
- 
 
-  const onSubmit = (data: any) => JSON.stringify(data); 
+    const onSubmit = (data: any) => JSON.stringify(data);
 
- 
 
-  return ( 
+    return (
 
-    <form onSubmit={handleSubmit(onSubmit)}> 
+        <form onSubmit={handleSubmit(onSubmit)}>
 
-      <input {...register("title")} placeholder="Title" /> 
+            <input {...register("title")} placeholder="Title"/>
 
-      <p> 
+            <p>
 
-        <input {...register("authors")} placeholder="Authors" /> 
+                <input {...register("authors")} placeholder="Authors"/>
 
-      </p> 
+            </p>
 
-      <p> 
+            <p>
 
-        <input {...register("source")} placeholder="Source" /> 
+                <input {...register("source")} placeholder="Source"/>
 
-      </p> 
+            </p>
 
-      <p> 
+            <p>
 
-        <input {...register("pubyear")} placeholder="Publication Year" /> 
+                <input {...register("pubyear")} placeholder="Publication Year"/>
 
-      </p> 
+            </p>
 
-      <p> 
+            <p>
 
-        <input {...register("doi")} placeholder="DOI" /> 
+                <input {...register("doi")} placeholder="DOI"/>
 
-      </p> 
+            </p>
 
- 
 
-      <select {...register("linked_discussion")}> 
+            <select {...register("linked_discussion")}>
 
-        <option value="">Select SE practice...</option> 
-<option value="TDD">TDD</option> 
+                <option value="">Select SE practice...</option>
+                <option value="TDD">TDD</option>
 
-        <option value="Mob Programming">Mob Programmin</option> 
+                <option value="Mob Programming">Mob Programmin</option>
 
-      </select> 
+            </select>
 
-      <input type="submit" /> 
+            <input type="submit"/>
 
-    </form> 
+        </form>
 
-  ); 
+    );
 
 } 
 

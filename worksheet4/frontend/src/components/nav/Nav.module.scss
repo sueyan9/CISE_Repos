@@ -1,119 +1,111 @@
-.navbar { 
+.navbar {
 
-     display: flex; 
-    
-     position: relative; 
-    
-     top: 0; 
-    
-     flex-direction: row; 
-    
-     width: 100%; 
-    
-     background-color: darkblue; 
-    
-     align-items: center; 
-    
-    color: aliceblue; 
-    
-    font-size: 1.5em; 
-    
-    font-weight: bold; 
-    
-    transition: top 0.5s; 
-    height: fit-content; 
+  display: flex;
 
-} 
+  position: relative;
 
- 
+  top: 0;
 
-.hide { 
+  flex-direction: row;
 
- top: -3em; 
+  width: 100%;
 
-} 
+  background-color: darkblue;
 
- 
+  align-items: center;
 
-.navitem { 
+  color: aliceblue;
 
- position: relative; 
+  font-size: 1.5em;
 
- padding: 1em; 
+  font-weight: bold;
 
- width: auto; 
+  transition: top 0.5s;
+  height: fit-content;
 
- display: flex; 
+}
 
- flex-direction: row; 
 
- align-items: center; 
+.hide {
 
- cursor: default; 
+  top: -3em;
 
- white-space: nowrap; 
+}
 
-} 
 
- 
+.navitem {
 
-.clickable { 
+  position: relative;
 
- @extend .navitem; 
+  padding: 1em;
 
- cursor: pointer; 
+  width: auto;
 
-} 
+  display: flex;
 
- 
+  flex-direction: row;
 
-.clickable:hover { 
+  align-items: center;
 
- backdrop-filter: brightness(50%); 
+  cursor: default;
 
-} 
+  white-space: nowrap;
 
- 
+}
 
-.dropdown_container { 
 
-visibility: hidden; 
+.clickable {
 
- display: flex; 
+  @extend .navitem;
 
- flex-direction: column; 
- background-color: darkblue; 
+  cursor: pointer;
 
-position: absolute; 
+}
 
- top: 100%; 
 
-right: 0; 
+.clickable:hover {
 
-} 
+  backdrop-filter: brightness(50%);
 
- 
+}
 
-.dropdown:hover { 
 
- cursor: pointer; 
+.dropdown_container {
 
- backdrop-filter: brightness(50%); 
+  visibility: hidden;
 
- 
+  display: flex;
 
-.dropdown_container { 
+  flex-direction: column;
+  background-color: darkblue;
 
- visibility: visible; 
+  position: absolute;
 
-} 
+  top: 100%;
 
-} 
+  right: 0;
 
- 
+}
 
-.end { 
 
-margin-left: auto; 
+.dropdown:hover {
+
+  cursor: pointer;
+
+  backdrop-filter: brightness(50%);
+
+
+  .dropdown_container {
+
+    visibility: visible;
+
+  }
+
+}
+
+
+.end {
+
+  margin-left: auto;
 
 } 
